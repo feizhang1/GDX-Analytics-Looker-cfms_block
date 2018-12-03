@@ -1034,13 +1034,14 @@ AND  ( (holdparity IS NULL OR holdparity = 0) AND invite_time IS NOT NULL AND st
       sql: ${TABLE}.parent_id ;;
       group_label: "Program Information"
     }
+
     dimension: program_name {
       type: string
       sql: ${TABLE}.program_name ;;
       group_label: "Program Information"
       link: {
         label: "test"
-        url: "/dashboards/43?Office%20Name={{ _filters['cfms_poc.office_name'] | url_encode }}&Program%20Name={{ value }}&Date={{ _filters['cfms_poc.date'] | url_encode }}"
+        url:   "/dashboards/43?Office%20Name={{ _filters['cfms_poc.office_name'] | url_encode }}&Program%20Name={{ value }}&Date={{ _filters['cfms_poc.date'] | url_encode }}"
       }
 
     }
